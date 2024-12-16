@@ -1,9 +1,9 @@
 +++
-title = "Azure Kubernetes Service (AKS)"
+title = "Azure documentation"
 type = "chapter"
 weight = 1
 +++
 
-AKS allows you to quickly deploy a production ready Kubernetes cluster in Azure
+Learn by doing
 
-![AKS01](/images/aks01.png)
+![AKS01](/images/az01.png)
