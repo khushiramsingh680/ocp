@@ -1,6 +1,6 @@
 +++
-title = "Kubernetes Installation"
+title = "Azure Cloud Administration"
 
 +++
 
-TOC
+
