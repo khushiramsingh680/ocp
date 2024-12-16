@@ -1,11 +1,11 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "",
-    "content": "AKS allows you to quickly deploy a production ready Kubernetes cluster in Azure",
-    "description": "AKS allows you to quickly deploy a production ready Kubernetes cluster in Azure",
+    "content": "Learn by doing",
+    "description": "Learn by doing",
     "tags": [],
-    "title": "Azure Kubernetes Service (AKS)",
-    "uri": "/aks/index.html"
+    "title": "Azure documentation",
+    "uri": "/azure/index.html"
   },
   {
     "breadcrumb": "",
@@ -16,12 +16,12 @@ var relearn_searchindex = [
     "uri": "/categories/index.html"
   },
   {
-    "breadcrumb": "Azure Kubernetes Service (AKS)",
+    "breadcrumb": "Azure documentation",
     "content": "TOC",
     "description": "TOC",
     "tags": [],
     "title": "Kubernetes Installation",
-    "uri": "/aks/k8s/index.html"
+    "uri": "/azure/azure/index.html"
   },
   {
     "breadcrumb": "",
