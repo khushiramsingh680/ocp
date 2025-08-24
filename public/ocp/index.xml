@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redhat Openshift  :: Openshift Documentation</title>
+    <link>https://khushiramsingh680.github.io/ocp/ocp/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://khushiramsingh680.github.io/ocp/ocp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenShift Prerequisites</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/prerequisites/index.html</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/prerequisites/index.html</guid>
+      <description>Essential prerequisites for installing OpenShift across different platforms (bare metal, VMware, AWS, Azure, GCP).</description>
+    </item>
+    <item>
+      <title>OpenShift Single Node Cluster</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/ocp-sno/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/ocp-sno/index.html</guid>
+      <description>Step-by-step guide for deploying and integrating OpenShift Single Node clusters.</description>
+    </item>
+    <item>
+      <title>Openshift Installation on Vmware</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/ocp-onvmware-copy/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/ocp-onvmware-copy/index.html</guid>
+      <description>Comprehensive OpenShift guides and documentation.</description>
+    </item>
+    <item>
+      <title>Openshift Baremetal</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/openshift-baremetal.md/index.html</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/openshift-baremetal.md/index.html</guid>
+      <description>Red Hat Openshift 4 Bare Metal OpenShift 4 Bare Metal Install User Provisioned Infrastructure (UPI) Step 0 : Architecture Diagram Step 1: Setup KVM Infrastructure (On Hypervisor Node) Step 2: Create utility Virtual Machine Step 4: Install and Configure DHCP server Step 5: Configure OCP Zone on Bind DNS Server Step 6: Setup TFTP Service Step 7: Configure HAProxy as Load balancer Step 8: Install OpenShift installer and CLI binary Step 9: Generate ignition files Step 10: Create Bootstrap, Masters and Worker VMs (On Hypervisor Node) Step 11: Login to OpenShift CLI / Web Console Step 12: Create other OpenShift Users Step 13: Configure storage for the Image Registry Step 14: Troubleshooting Installation Step 15: OpenShift Virtualization - Run VMs on OpenShift with KubeVirt - Windows Server Step 16: NFS Storage Class with OpenShift &amp; Kubernetes</description>
+    </item>
+    <item>
+      <title>OpenShift for Developers</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/openshift-developer/index.html</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/openshift-developer/index.html</guid>
+      <description>OpenShift for Developers</description>
+    </item>
+    <item>
+      <title>OpenShift Tasks</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/openshifttasks/index.html</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/openshifttasks/index.html</guid>
+      <description>OpenShift Tasks</description>
+    </item>
+    <item>
+      <title>Openshift TOC</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/toc/index.html</link>
+      <pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/toc/index.html</guid>
+      <description>Openshift TOC</description>
+    </item>
+    <item>
+      <title>Part 2</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/part-2/index.html</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/part-2/index.html</guid>
+      <description>Day02</description>
+    </item>
+    <item>
+      <title>Virtual Box</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/virtualbox/index.html</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/virtualbox/index.html</guid>
+      <description>How to increase disk size in virtualbox Stop the vm on virtualbox check the disk VBoxManage list hdds&#xD;Increase the size to 50 GB VBoxManage modifyhd &#34;E:\VirtualBox VMs\crc_default_1725632457848_7611\Rocky-9-Vagrant-Vbox-9.4-20240509.0.x86_64.vmdk&#34; --resize 51200</description>
+    </item>
+    <item>
+      <title>Openshift 4 Tasks</title>
+      <link>https://khushiramsingh680.github.io/ocp/ocp/ocp-tasks/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://khushiramsingh680.github.io/ocp/ocp/ocp-tasks/index.html</guid>
+      <description>Openshift</description>
+    </item>
+  </channel>
+</rss>

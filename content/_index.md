@@ -2,5 +2,6 @@
 title = ""
 type = "home"
 +++
-
-Azure Cloud Documentatation
+## Openshift Administration
+## Openshift Developer
+## Openshift Virtualization

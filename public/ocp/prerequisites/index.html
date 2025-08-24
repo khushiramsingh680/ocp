@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Essential prerequisites for installing OpenShift across different platforms (bare metal, VMware, AWS, Azure, GCP).">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="OpenShift Prerequisites :: Openshift Documentation">
+    <meta name="twitter:description" content="Essential prerequisites for installing OpenShift across different platforms (bare metal, VMware, AWS, Azure, GCP).">
+    <meta property="og:url" content="https://khushiramsingh680.github.io/ocp/ocp/prerequisites/index.html">
+    <meta property="og:site_name" content="Openshift Documentation">
+    <meta property="og:title" content="OpenShift Prerequisites :: Openshift Documentation">
+    <meta property="og:description" content="Essential prerequisites for installing OpenShift across different platforms (bare metal, VMware, AWS, Azure, GCP).">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Redhat Openshift ">
+    <meta property="article:published_time" content="2025-08-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-24T00:00:00+00:00">
+    <meta itemprop="name" content="OpenShift Prerequisites :: Openshift Documentation">
+    <meta itemprop="description" content="Essential prerequisites for installing OpenShift across different platforms (bare metal, VMware, AWS, Azure, GCP).">
+    <meta itemprop="datePublished" content="2025-08-24T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2025-08-24T00:00:00+00:00">
+    <meta itemprop="wordCount" content="389">
+    <title>OpenShift Prerequisites :: Openshift Documentation</title>
+    <link href="../../ocp/css/auto-complete/auto-complete.min.css?1756040388" rel="stylesheet">
+    <script src="../../ocp/js/auto-complete/auto-complete.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/search-lunr.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/search.min.js?1756040388" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../../searchindex.en.js?1756040388";
+    </script>
+    <script src="../../ocp/js/lunr/lunr.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/lunr/lunr.stemmer.support.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/lunr/lunr.multi.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/lunr/lunr.en.min.js?1756040388" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1756040388" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1756040388" rel="stylesheet"></noscript>
+    <link href="../../ocp/css/perfect-scrollbar/perfect-scrollbar.min.css?1756040388" rel="stylesheet">
+    <link href="../../css/theme.min.css?1756040388" rel="stylesheet">
+    <link href="../../css/format-html.min.css?1756040388" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/ocp\/prerequisites\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/khushiramsingh680.github.io\/ocp';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../../ocp/prerequisites/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#openshift-prerequisites">OpenShift Prerequisites</a>
+      <ul>
+        <li><a href="#1-red-hat-account">1. Red Hat Account</a></li>
+        <li><a href="#2-openshift-installer">2. OpenShift Installer</a></li>
+        <li><a href="#3-pull-secret">3. Pull Secret</a></li>
+        <li><a href="#4-dns-and-networking">4. DNS and Networking</a></li>
+        <li><a href="#5-infrastructure-vms-or-bare-metal">5. Infrastructure (VMs or Bare Metal)</a></li>
+        <li><a href="#6-cloud-cli-tools">6. Cloud CLI Tools</a></li>
+        <li><a href="#7-certificates-and-security">7. Certificates and Security</a></li>
+        <li><a href="#8-storage-requirements">8. Storage Requirements</a></li>
+        <li><a href="#9-operating-system-requirements">9. Operating System Requirements</a></li>
+        <li><a href="#10-additional-tools-optional-but-recommended">10. Additional Tools (Optional but Recommended)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../index.html"><span itemprop="name">Openshift Documentation</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../../ocp/index.html"><span itemprop="name">Redhat Openshift </span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">OpenShift Prerequisites</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../ocp/index.html" title="Redhat Openshift  (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../ocp/ocp-sno/index.html" title="OpenShift Single Node Cluster (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable ocp" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="openshift-prerequisites">OpenShift Prerequisites</h1>
+
+<h2 id="openshift-prerequisites">OpenShift Prerequisites</h2>
+<p>Before installing OpenShift, ensure the following prerequisites are met for your environment.</p>
+<hr>
+<h3 id="1-red-hat-account">1. Red Hat Account</h3>
+<p>A Red Hat account is required to download the installer, access the pull secret, and manage subscriptions.<br>
+👉 <a href="https://console.redhat.com/" rel="external" target="_blank">Create a Red Hat Account</a></p>
+<hr>
+<h3 id="2-openshift-installer">2. OpenShift Installer</h3>
+<p>Download the OpenShift installer appropriate for your target environment (bare metal, VMware, AWS, Azure, or GCP).<br>
+👉 <a href="https://console.redhat.com/openshift/install" rel="external" target="_blank">Download the Installer</a></p>
+<hr>
+<h3 id="3-pull-secret">3. Pull Secret</h3>
+<p>The pull secret is required to access Red Hat’s container registries during installation.<br>
+👉 <a href="https://console.redhat.com/openshift/install/pull-secret" rel="external" target="_blank">Download Pull Secret</a></p>
+<hr>
+<h3 id="4-dns-and-networking">4. DNS and Networking</h3>
+<ul>
+<li>Ensure <strong>DNS resolution</strong> is properly configured for the cluster.</li>
+<li>Required DNS records:
+<ul>
+<li><code>api.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> → Load balancer or bootstrap node</li>
+<li><code>*.apps.&lt;cluster_name&gt;.&lt;base_domain&gt;</code> → Application load balancer</li>
+</ul>
+</li>
+<li>Configure <strong>reverse DNS lookup</strong> for all nodes.</li>
+<li>Ensure required <strong>firewall ports</strong> are open (API, ingress, node-to-node communication).<br>
+👉 <a href="https://docs.openshift.com/container-platform/latest/installing/installing_platform_agnostic/installing-platform-agnostic.html#installation-network-user-infra_installing-platform-agnostic" rel="external" target="_blank">OpenShift Networking Requirements</a></li>
+</ul>
+<hr>
+<h3 id="5-infrastructure-vms-or-bare-metal">5. Infrastructure (VMs or Bare Metal)</h3>
+<p>Provision infrastructure based on your target platform:</p>
+<h4 id="bare-metal">Bare Metal</h4>
+<ul>
+<li>Minimum of 3 master nodes (control plane)</li>
+<li>Worker nodes (based on workload requirements)</li>
+<li>Hardware (per node):
+<ul>
+<li>Master: 4 vCPU, 16 GB RAM, 120 GB disk</li>
+<li>Worker: 4 vCPU, 8 GB RAM, 120 GB disk</li>
+</ul>
+</li>
+</ul>
+<h4 id="vmware-vsphere">VMware vSphere</h4>
+<ul>
+<li>vCenter access with admin privileges</li>
+<li>Pre-created VM templates or ability to create VMs</li>
+<li>Shared datastore and networking</li>
+</ul>
+<h4 id="public-clouds-aws-azure-gcp">Public Clouds (AWS, Azure, GCP)</h4>
+<ul>
+<li>Proper IAM roles and permissions</li>
+<li>Region and VPC/subnet prepared</li>
+<li>Load balancers enabled</li>
+<li>Storage services (EBS, Azure Disk, GCP Persistent Disk) available</li>
+</ul>
+<hr>
+<h3 id="6-cloud-cli-tools">6. Cloud CLI Tools</h3>
+<h4 id="aws-cli">AWS CLI</h4>
+<p>👉 <a href="https://aws.amazon.com/cli/" rel="external" target="_blank">Download AWS CLI</a></p>
+<h4 id="azure-cli">Azure CLI</h4>
+<p>👉 <a href="https://learn.microsoft.com/en-us/cli/azure/" rel="external" target="_blank">Download Azure CLI</a></p>
+<h4 id="gcp-sdk">GCP SDK</h4>
+<p>👉 <a href="https://cloud.google.com/sdk/docs/install" rel="external" target="_blank">Download Google Cloud SDK</a></p>
+<h4 id="vmware-cli-tools">VMware CLI Tools</h4>
+<ul>
+<li><strong>ovftool</strong> for importing templates</li>
+<li>vSphere client access</li>
+</ul>
+<hr>
+<h3 id="7-certificates-and-security">7. Certificates and Security</h3>
+<ul>
+<li>Configure TLS certificates (self-signed or custom CA if required).</li>
+<li>Ensure SSH key pair is generated for cluster node access.<br>
+👉 <a href="https://docs.openshift.com/container-platform/latest/installing/installing-preparing.html#ssh-agent-using_installing-preparing" rel="external" target="_blank">Generate SSH Key</a></li>
+</ul>
+<hr>
+<h3 id="8-storage-requirements">8. Storage Requirements</h3>
+<ul>
+<li><strong>Infrastructure storage</strong> for etcd and control plane.</li>
+<li><strong>Persistent storage</strong> for applications (NFS, Ceph, GlusterFS, EBS, Azure Disk, GCP PD, VMware vSAN).<br>
+👉 <a href="https://docs.openshift.com/container-platform/latest/storage/understanding-persistent-storage.html" rel="external" target="_blank">Storage Requirements</a></li>
+</ul>
+<hr>
+<h3 id="9-operating-system-requirements">9. Operating System Requirements</h3>
+<ul>
+<li>Supported OS for nodes:
+<ul>
+<li>Red Hat Enterprise Linux CoreOS (RHCOS) – default</li>
+<li>Red Hat Enterprise Linux (RHEL) with prerequisites installed</li>
+</ul>
+</li>
+<li>Ensure subscription is attached for RHEL nodes.</li>
+</ul>
+<hr>
+<h3 id="10-additional-tools-optional-but-recommended">10. Additional Tools (Optional but Recommended)</h3>
+<ul>
+<li><code>oc</code> CLI (OpenShift client) 👉 <a href="https://console.redhat.com/openshift/downloads" rel="external" target="_blank">Download OC CLI</a></li>
+<li><code>kubectl</code> CLI (for Kubernetes-level operations)</li>
+<li>Infrastructure automation tools (Terraform, Ansible) for IaC deployments</li>
+</ul>
+<hr>
+<p>✅ With these prerequisites completed, you are ready to begin the <strong>OpenShift installation</strong> on your target platform.</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Aug 24, 2025
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="../../index.html">
+            <div class="logo-title">Openshift Documentation</div>
+          </a>
+        </div>
+        <search><form action="../../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="../../index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="parent " data-nav-id="/ocp/index.html"><a class="padding" href="../../ocp/index.html">Redhat Openshift </a><ul id="R-subsections-deec8eacf990d8f833b93419ccb5dda5" class="collapsible-menu">
+            <li class="active " data-nav-id="/ocp/prerequisites/index.html"><a class="padding" href="../../ocp/prerequisites/index.html">OpenShift Prerequisites</a></li>
+            <li class="" data-nav-id="/ocp/ocp-sno/index.html"><a class="padding" href="../../ocp/ocp-sno/index.html">OpenShift Single Node Cluster</a></li>
+            <li class="" data-nav-id="/ocp/ocp-onvmware-copy/index.html"><a class="padding" href="../../ocp/ocp-onvmware-copy/index.html">Openshift Installation on Vmware</a></li>
+            <li class="" data-nav-id="/ocp/openshift-baremetal.md/index.html"><a class="padding" href="../../ocp/openshift-baremetal.md/index.html">Openshift Baremetal</a></li>
+            <li class="" data-nav-id="/ocp/openshift-developer/index.html"><a class="padding" href="../../ocp/openshift-developer/index.html">OpenShift for Developers</a></li>
+            <li class="" data-nav-id="/ocp/openshifttasks/index.html"><a class="padding" href="../../ocp/openshifttasks/index.html">OpenShift Tasks</a></li>
+            <li class="" data-nav-id="/ocp/toc/index.html"><a class="padding" href="../../ocp/toc/index.html">Openshift TOC</a></li>
+            <li class="" data-nav-id="/ocp/part-2/index.html"><a class="padding" href="../../ocp/part-2/index.html">Part 2</a></li>
+            <li class="" data-nav-id="/ocp/virtualbox/index.html"><a class="padding" href="../../ocp/virtualbox/index.html">Virtual Box</a></li>
+            <li class="" data-nav-id="/ocp/ocp-tasks/index.html"><a class="padding" href="../../ocp/ocp-tasks/index.html">Openshift 4 Tasks</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../../ocp/js/clipboard/clipboard.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/perfect-scrollbar/perfect-scrollbar.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/theme.min.js?1756040388" defer></script>
+  </body>
+</html>
