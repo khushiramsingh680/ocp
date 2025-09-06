@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/ocp/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=ocp/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="OpenShift Licensing Models: Plus, Essentials, and Core Offerings Red Hat offers multiple versions of OpenShift that come with varying levels of functionality and features. These are primarily OpenShift Container Platform and OpenShift Plus, which are bundled with additional features. Below is a breakdown of these offerings.
+1. OpenShift Container Platform (OCP) This is the core product and includes the essential components required to deploy and manage OpenShift clusters on-premises or in the cloud. It includes:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="OpenShift Overview :: Openshift Documentation">
+    <meta name="twitter:description" content="OpenShift Licensing Models: Plus, Essentials, and Core Offerings Red Hat offers multiple versions of OpenShift that come with varying levels of functionality and features. These are primarily OpenShift Container Platform and OpenShift Plus, which are bundled with additional features. Below is a breakdown of these offerings.
+1. OpenShift Container Platform (OCP) This is the core product and includes the essential components required to deploy and manage OpenShift clusters on-premises or in the cloud. It includes:">
+    <meta property="og:url" content="http://localhost:1313/ocp/openshift-overview/index.html">
+    <meta property="og:site_name" content="Openshift Documentation">
+    <meta property="og:title" content="OpenShift Overview :: Openshift Documentation">
+    <meta property="og:description" content="OpenShift Licensing Models: Plus, Essentials, and Core Offerings Red Hat offers multiple versions of OpenShift that come with varying levels of functionality and features. These are primarily OpenShift Container Platform and OpenShift Plus, which are bundled with additional features. Below is a breakdown of these offerings.
+1. OpenShift Container Platform (OCP) This is the core product and includes the essential components required to deploy and manage OpenShift clusters on-premises or in the cloud. It includes:">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="OpenShift Overview :: Openshift Documentation">
+    <meta itemprop="description" content="OpenShift Licensing Models: Plus, Essentials, and Core Offerings Red Hat offers multiple versions of OpenShift that come with varying levels of functionality and features. These are primarily OpenShift Container Platform and OpenShift Plus, which are bundled with additional features. Below is a breakdown of these offerings.
+1. OpenShift Container Platform (OCP) This is the core product and includes the essential components required to deploy and manage OpenShift clusters on-premises or in the cloud. It includes:">
+    <meta itemprop="wordCount" content="1507">
+    <title>OpenShift Overview :: Openshift Documentation</title>
+    <link href="../openshift-overview/index.xml" rel="alternate" type="application/rss+xml" title="OpenShift Overview :: Openshift Documentation">
+    <link href="../ocp/css/auto-complete/auto-complete.min.css?1757132647" rel="stylesheet">
+    <script src="../ocp/js/auto-complete/auto-complete.min.js?1757132647" defer></script>
+    <script src="../ocp/js/search-lunr.js?1757132647" defer></script>
+    <script src="../ocp/js/search.js?1757132647" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../searchindex.en.js?1757132647";
+    </script>
+    <script src="../ocp/js/lunr/lunr.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.stemmer.support.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.multi.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.en.min.js?1757132647" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet"></noscript>
+    <link href="../ocp/css/perfect-scrollbar/perfect-scrollbar.min.css?1757132647" rel="stylesheet">
+    <link href="../css/theme.css?1757132647" rel="stylesheet">
+    <link href="../css/format-html.css?1757132647" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/openshift-overview\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/ocp';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../openshift-overview/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#openshift-licensing-models-plus-essentials-and-core-offerings">OpenShift Licensing Models: Plus, Essentials, and Core Offerings</a></li>
+    <li><a href="#1-openshift-container-platform-ocp">1. <strong>OpenShift Container Platform (OCP)</strong></a></li>
+    <li><a href="#2-openshift-plus">2. <strong>OpenShift Plus</strong></a></li>
+    <li><a href="#3-openshift-essentials">3. <strong>OpenShift Essentials</strong></a></li>
+    <li><a href="#4-openshift-online">4. <strong>OpenShift Online</strong></a></li>
+    <li><a href="#comparison-of-key-offerings">Comparison of Key Offerings</a></li>
+    <li><a href="#licensing-models-for-openshift-plus-and-essentials">Licensing Models for OpenShift Plus and Essentials</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#1-openshift-container-platform-ocp-cluster">1. OpenShift Container Platform (OCP) Cluster</a></li>
+    <li><a href="#2-openshift-dedicated-cluster">2. OpenShift Dedicated Cluster</a></li>
+    <li><a href="#3-openshift-online-cluster">3. OpenShift Online Cluster</a></li>
+    <li><a href="#4-openshift-container-platform-with-red-hat-openshift-virtualization-rov-cluster">4. OpenShift Container Platform with Red Hat OpenShift Virtualization (ROV) Cluster</a></li>
+    <li><a href="#5-openshift-container-platform-with-red-hat-openshift-service-mesh-cluster">5. OpenShift Container Platform with Red Hat OpenShift Service Mesh Cluster</a></li>
+    <li><a href="#6-openshift-cluster-on-public-cloud-aws-azure-google-cloud">6. OpenShift Cluster on Public Cloud (AWS, Azure, Google Cloud)</a></li>
+    <li><a href="#7-openshift-with-red-hat-openshift-data-science">7. OpenShift with Red Hat OpenShift Data Science</a></li>
+    <li><a href="#8-openshift-with-red-hat-openshift-advanced-cluster-management-acm">8. OpenShift with Red Hat OpenShift Advanced Cluster Management (ACM)</a></li>
+    <li><a href="#9-openshift-container-platform-with-red-hat-openshift-pipelines-cluster">9. OpenShift Container Platform with Red Hat OpenShift Pipelines Cluster</a></li>
+    <li><a href="#10-openshift-edge-cluster">10. OpenShift Edge Cluster</a></li>
+    <li><a href="#summary-of-openshift-cluster-types">Summary of OpenShift Cluster Types</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../index.html"><span itemprop="name">Openshift Documentation</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">OpenShift Overview</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../ocp-pre/index.html" title="OCP: Day 01 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../openshift-alternatives/index.html" title="Openshift Alternatives (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="chapter narrow">
+  <header class="headline">
+  </header>
+<div class="article-subheading">Chapter 1</div>
+
+<h1 id="openshift-overview">OpenShift Overview</h1>
+
+<h2 id="openshift-licensing-models-plus-essentials-and-core-offerings">OpenShift Licensing Models: Plus, Essentials, and Core Offerings</h2>
+<p>Red Hat offers multiple versions of OpenShift that come with varying levels of functionality and features. These are primarily <strong>OpenShift Container Platform</strong> and <strong>OpenShift Plus</strong>, which are bundled with additional features. Below is a breakdown of these offerings.</p>
+<h2 id="1-openshift-container-platform-ocp">1. <strong>OpenShift Container Platform (OCP)</strong></h2>
+<p>This is the core product and includes the essential components required to deploy and manage OpenShift clusters on-premises or in the cloud. It includes:</p>
+<ul>
+<li><strong>Core features</strong>: Kubernetes, Docker, container orchestration, and Red Hat’s operational tools.</li>
+<li><strong>Security and Compliance</strong>: Built-in security features like SELinux, integrated container scanning, and vulnerability management.</li>
+<li><strong>Monitoring and Logging</strong>: Integrated solutions for monitoring, alerting, and logging (via Prometheus, Grafana, and the ELK stack).</li>
+<li><strong>Support</strong>: Access to Red Hat’s 24/7 support with multiple levels (Basic, Standard, Premium).</li>
+</ul>
+<h2 id="2-openshift-plus">2. <strong>OpenShift Plus</strong></h2>
+<p>OpenShift Plus bundles <strong>additional value-added features</strong> on top of the OpenShift Container Platform. It is designed for enterprises that need more extensive tools for scaling, automation, and integration.</p>
+<p>Key features include:</p>
+<ul>
+<li><strong>Red Hat OpenShift Service Mesh</strong>: Built on Istio, it enables observability, traffic management, and security for microservices.</li>
+<li><strong>Red Hat OpenShift GitOps</strong>: Automates application deployment and lifecycle management using Git as the source of truth.</li>
+<li><strong>Red Hat OpenShift Pipelines</strong>: A Kubernetes-native CI/CD pipeline tool for automating software delivery.</li>
+<li><strong>Red Hat OpenShift Virtualization</strong>: Extends OpenShift to manage virtual machines alongside containers.</li>
+<li><strong>Red Hat OpenShift Data Science</strong>: A platform to develop and deploy AI/ML models with Kubernetes.</li>
+</ul>
+<p>OpenShift Plus is generally aimed at larger organizations that need enhanced scalability, security, or specialized services (like machine learning, deep observability, or multi-cluster management).</p>
+<h2 id="3-openshift-essentials">3. <strong>OpenShift Essentials</strong></h2>
+<p>OpenShift Essentials is typically aimed at developers and small teams who need a lightweight, simplified version of OpenShift. It&rsquo;s a <strong>streamlined and more affordable offering</strong> than the full OpenShift Container Platform.</p>
+<p>Key differences compared to the full version:</p>
+<ul>
+<li><strong>Simpler Setup and Maintenance</strong>: Aimed at reducing the complexity of managing OpenShift for smaller teams.</li>
+<li><strong>Basic CI/CD and GitOps</strong>: Focuses on core container orchestration without extensive added tools.</li>
+<li><strong>Limited Scalability</strong>: Typically suitable for smaller deployments, but may not scale as easily as the full platform.</li>
+<li><strong>Limited Support</strong>: May not include 24/7 support or enterprise-level security features depending on the specific package.</li>
+</ul>
+<h2 id="4-openshift-online">4. <strong>OpenShift Online</strong></h2>
+<p>This is the <strong>fully managed version of OpenShift</strong> available as a public cloud service. It&rsquo;s an ideal option for small teams or individual developers who don’t want to manage the underlying infrastructure but still want to leverage OpenShift&rsquo;s capabilities.</p>
+<ul>
+<li>It’s more cost-effective and offers flexibility in scaling up or down based on usage.</li>
+<li><strong>Does not include full enterprise-grade features</strong> like the OpenShift Container Platform but provides the core platform with a hosted, managed environment.</li>
+</ul>
+<h2 id="comparison-of-key-offerings">Comparison of Key Offerings</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>OpenShift Container Platform</th>
+          <th>OpenShift Plus</th>
+          <th>OpenShift Essentials</th>
+          <th>OpenShift Online</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Core OpenShift features</strong></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>✔️</td>
+      </tr>
+      <tr>
+          <td><strong>CI/CD (Pipelines, GitOps)</strong></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>Limited</td>
+          <td>Limited</td>
+      </tr>
+      <tr>
+          <td><strong>Service Mesh (Istio)</strong></td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td><strong>Virtualization Support</strong></td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td><strong>Machine Learning &amp; Data Science</strong></td>
+          <td>❌</td>
+          <td>✔️</td>
+          <td>❌</td>
+          <td>❌</td>
+      </tr>
+      <tr>
+          <td><strong>Advanced Monitoring &amp; Logging</strong></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>Limited</td>
+          <td>✔️</td>
+      </tr>
+      <tr>
+          <td><strong>Scaling and Customization</strong></td>
+          <td>High</td>
+          <td>High</td>
+          <td>Limited</td>
+          <td>Medium</td>
+      </tr>
+      <tr>
+          <td><strong>Support (Enterprise-Level)</strong></td>
+          <td>✔️</td>
+          <td>✔️</td>
+          <td>Limited</td>
+          <td>✔️ (via Red Hat)</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="licensing-models-for-openshift-plus-and-essentials">Licensing Models for OpenShift Plus and Essentials</h2>
+<p>For <strong>OpenShift Plus</strong>, pricing is based on <strong>entitlements</strong>:</p>
+<ul>
+<li><strong>Per Core</strong> or <strong>Per Node</strong> for OCP.</li>
+<li>Additional <strong>per-user</strong> or <strong>per-cluster</strong> charges for features like Service Mesh, GitOps, or Data Science.</li>
+</ul>
+<p>For <strong>OpenShift Essentials</strong>, pricing may be lower and is typically based on a more straightforward model, with an emphasis on smaller-scale, cost-effective deployments.</p>
+<h1 id="openshift-types-of-clusters">OpenShift Types of Clusters</h1>
+<p>OpenShift offers several types of clusters designed for different use cases and environments. Below is an overview of the <strong>different types of OpenShift clusters</strong>:</p>
+<h2 id="1-openshift-container-platform-ocp-cluster">1. OpenShift Container Platform (OCP) Cluster</h2>
+<ul>
+<li><strong>On-Premises</strong>: This is a self-managed cluster that you deploy on your own infrastructure, whether on bare metal or virtualized environments like VMware.</li>
+<li><strong>Hybrid Cloud</strong>: You can also manage OpenShift clusters across hybrid cloud environments (on-premises and cloud).</li>
+<li><strong>Key Features</strong>: Full control over the cluster and its configurations, ideal for enterprises needing robust security, high availability, and integration with existing on-prem infrastructure.</li>
+<li><strong>Use Cases</strong>: Large-scale enterprise applications, private cloud environments.</li>
+</ul>
+<h2 id="2-openshift-dedicated-cluster">2. OpenShift Dedicated Cluster</h2>
+<ul>
+<li><strong>Managed Service</strong>: OpenShift Dedicated is a fully managed service that runs on <strong>Amazon Web Services (AWS)</strong> or <strong>Google Cloud Platform (GCP)</strong>. Red Hat manages the cluster on your behalf, so you don’t have to manage the underlying infrastructure.</li>
+<li><strong>Key Features</strong>: Fully managed by Red Hat, ideal for organizations that want OpenShift but prefer not to handle the operational complexity.</li>
+<li><strong>Use Cases</strong>: Companies that want to offload infrastructure management but still require enterprise-grade OpenShift capabilities in the cloud.</li>
+</ul>
+<h2 id="3-openshift-online-cluster">3. OpenShift Online Cluster</h2>
+<ul>
+<li><strong>Public Cloud Service</strong>: OpenShift Online is a fully managed public OpenShift service that runs on the cloud. It is designed for developers who need to quickly get started with Kubernetes without managing the infrastructure.</li>
+<li><strong>Key Features</strong>: Simplified setup, cost-effective, no need to worry about cluster maintenance or scaling. Available for both free and paid tiers.</li>
+<li><strong>Use Cases</strong>: Small teams, individual developers, and startups that want to use OpenShift with minimal setup.</li>
+</ul>
+<h2 id="4-openshift-container-platform-with-red-hat-openshift-virtualization-rov-cluster">4. OpenShift Container Platform with Red Hat OpenShift Virtualization (ROV) Cluster</h2>
+<ul>
+<li><strong>Virtualization Support</strong>: This is a specialized OpenShift cluster that integrates <strong>Red Hat OpenShift Virtualization</strong>, allowing organizations to run <strong>VMs alongside containers</strong> in the same Kubernetes-based cluster.</li>
+<li><strong>Key Features</strong>: Combines container and virtual machine workloads, providing a unified platform for managing both.</li>
+<li><strong>Use Cases</strong>: Organizations looking to migrate from legacy applications running in VMs to containerized environments.</li>
+</ul>
+<h2 id="5-openshift-container-platform-with-red-hat-openshift-service-mesh-cluster">5. OpenShift Container Platform with Red Hat OpenShift Service Mesh Cluster</h2>
+<ul>
+<li><strong>Service Mesh Support</strong>: This OpenShift cluster is enhanced with <strong>Red Hat OpenShift Service Mesh</strong> (based on Istio), which provides observability, traffic management, and security for microservices.</li>
+<li><strong>Key Features</strong>: Features like intelligent routing, monitoring, and traffic management for microservices architectures.</li>
+<li><strong>Use Cases</strong>: Microservices-based applications with complex service interactions that require advanced networking, monitoring, and security.</li>
+</ul>
+<h2 id="6-openshift-cluster-on-public-cloud-aws-azure-google-cloud">6. OpenShift Cluster on Public Cloud (AWS, Azure, Google Cloud)</h2>
+<ul>
+<li><strong>Cloud-Hosted Clusters</strong>: OpenShift can also be deployed on public cloud platforms like AWS, Azure, and GCP using <strong>Red Hat OpenShift on AWS (ROSA)</strong>, <strong>Red Hat OpenShift on Azure (ARO)</strong>, and <strong>Red Hat OpenShift on GCP</strong>.</li>
+<li><strong>Key Features</strong>: These cloud-hosted clusters offer tight integration with cloud services while allowing organizations to benefit from OpenShift’s Kubernetes-based orchestration.</li>
+<li><strong>Use Cases</strong>: Organizations looking to leverage OpenShift in the public cloud for scalability, high availability, and integration with cloud-native services.</li>
+</ul>
+<h2 id="7-openshift-with-red-hat-openshift-data-science">7. OpenShift with Red Hat OpenShift Data Science</h2>
+<ul>
+<li><strong>AI/ML Support</strong>: This cluster includes additional tools to support <strong>data science workflows</strong> such as AI/ML model training and deployment.</li>
+<li><strong>Key Features</strong>: Includes tools for building and deploying machine learning models in a Kubernetes-native environment, such as TensorFlow, PyTorch, and other popular data science frameworks.</li>
+<li><strong>Use Cases</strong>: Teams working on machine learning, data science, and artificial intelligence projects.</li>
+</ul>
+<h2 id="8-openshift-with-red-hat-openshift-advanced-cluster-management-acm">8. OpenShift with Red Hat OpenShift Advanced Cluster Management (ACM)</h2>
+<ul>
+<li><strong>Multi-Cluster Management</strong>: OpenShift ACM allows you to manage multiple OpenShift clusters across different environments (on-premises, public cloud, hybrid) from a single console.</li>
+<li><strong>Key Features</strong>: Centralized management, policy enforcement, and lifecycle management for multiple OpenShift clusters.</li>
+<li><strong>Use Cases</strong>: Organizations operating in multi-cluster or hybrid environments that need centralized management and governance.</li>
+</ul>
+<h2 id="9-openshift-container-platform-with-red-hat-openshift-pipelines-cluster">9. OpenShift Container Platform with Red Hat OpenShift Pipelines Cluster</h2>
+<ul>
+<li><strong>CI/CD Support</strong>: A cluster enhanced with <strong>Red Hat OpenShift Pipelines</strong>, a Kubernetes-native CI/CD tool that allows you to automate the software delivery process.</li>
+<li><strong>Key Features</strong>: Integration with Jenkins, GitLab, and other CI/CD tools, providing pipeline automation within the OpenShift environment.</li>
+<li><strong>Use Cases</strong>: Continuous integration and deployment needs for cloud-native applications.</li>
+</ul>
+<h2 id="10-openshift-edge-cluster">10. OpenShift Edge Cluster</h2>
+<ul>
+<li><strong>Edge Computing</strong>: This OpenShift deployment is intended for <strong>edge computing</strong> environments where computing resources are deployed close to where data is generated (e.g., IoT, retail, manufacturing).</li>
+<li><strong>Key Features</strong>: Lightweight, optimized for edge environments, supports remote management of edge clusters.</li>
+<li><strong>Use Cases</strong>: Internet of Things (IoT) applications, real-time processing at the edge of the network.</li>
+</ul>
+<hr>
+<h2 id="summary-of-openshift-cluster-types">Summary of OpenShift Cluster Types</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Cluster Type</th>
+          <th>Deployment Model</th>
+          <th>Features</th>
+          <th>Use Cases</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>OpenShift Container Platform (OCP)</strong></td>
+          <td>On-Premises, Hybrid</td>
+          <td>Full control, scalability, high availability, security</td>
+          <td>Large-scale enterprise applications, private cloud environments</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift Dedicated</strong></td>
+          <td>Managed (AWS/GCP)</td>
+          <td>Fully managed by Red Hat, no infrastructure management</td>
+          <td>Organizations preferring to offload infrastructure management</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift Online</strong></td>
+          <td>Managed (Public Cloud)</td>
+          <td>Simplified setup, cost-effective, developer-focused</td>
+          <td>Small teams, individual developers, startups</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift with Red Hat Virtualization (ROV)</strong></td>
+          <td>On-Premises</td>
+          <td>Runs both VMs and containers, unifying workloads</td>
+          <td>Organizations migrating from legacy VMs to containerized environments</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift with Service Mesh</strong></td>
+          <td>On-Premises, Cloud</td>
+          <td>Advanced networking and security for microservices</td>
+          <td>Microservices-based applications with complex service interactions</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift on Public Cloud (AWS, Azure, GCP)</strong></td>
+          <td>Cloud</td>
+          <td>Cloud-native, scalable, integrates with cloud services</td>
+          <td>Public cloud-native workloads and hybrid cloud deployments</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift with Data Science</strong></td>
+          <td>On-Premises, Cloud</td>
+          <td>Supports machine learning and AI/ML workloads</td>
+          <td>Data science, AI/ML, model training and deployment</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift with ACM (Advanced Cluster Management)</strong></td>
+          <td>Multi-Cluster</td>
+          <td>Centralized management of multiple clusters</td>
+          <td>Multi-cluster, hybrid cloud, and enterprise-wide management</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift with Pipelines</strong></td>
+          <td>On-Premises, Cloud</td>
+          <td>CI/CD for cloud-native applications</td>
+          <td>Automating software delivery and deployment</td>
+      </tr>
+      <tr>
+          <td><strong>OpenShift Edge</strong></td>
+          <td>Edge Computing</td>
+          <td>Optimized for distributed and remote edge environments</td>
+          <td>IoT, real-time data processing at the edge</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<p>Each cluster type is designed to address specific operational requirements, and your choice will depend on your infrastructure, workloads, and operational model.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="../index.html">
+            <div class="logo-title">Openshift Documentation</div>
+          </a>
+        </div>
+        <search><form action="../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="../index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/ocp/index.html"><a class="padding" href="../ocp/index.html">Redhat Openshift </a><ul id="R-subsections-deec8eacf990d8f833b93419ccb5dda5" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/ocp-pre/index.html"><a class="padding" href="../ocp-pre/index.html">OCP: Day 01</a></li>
+            <li class="active " data-nav-id="/openshift-overview/index.html"><a class="padding" href="../openshift-overview/index.html">OpenShift Overview</a></li>
+            <li class="" data-nav-id="/openshift-alternatives/index.html"><a class="padding" href="../openshift-alternatives/index.html">Openshift Alternatives</a></li>
+            <li class="" data-nav-id="/openshift-baremetal.md/index.html"><a class="padding" href="../openshift-baremetal.md/index.html">Openshift Baremetal</a></li>
+            <li class="" data-nav-id="/openshift-developer/index.html"><a class="padding" href="../openshift-developer/index.html">OpenShift for Developers</a></li>
+            <li class="" data-nav-id="/ocpsetup/index.html"><a class="padding" href="../ocpsetup/index.html">Openshift Installation and Upgradation</a></li>
+            <li class="" data-nav-id="/openshift-on-single-node/index.html"><a class="padding" href="../openshift-on-single-node/index.html">OpenShift on VMware Workstation</a></li>
+            <li class="" data-nav-id="/prerequisites./index.html"><a class="padding" href="../prerequisites./index.html">OpenShift Prerequisites</a></li>
+            <li class="" data-nav-id="/openshifttasks/index.html"><a class="padding" href="../openshifttasks/index.html">OpenShift Tasks</a></li>
+            <li class="" data-nav-id="/toc/index.html"><a class="padding" href="../toc/index.html">Openshift TOC</a></li>
+            <li class="" data-nav-id="/part-1/index.html"><a class="padding" href="../part-1/index.html">Part 1</a></li>
+            <li class="" data-nav-id="/part-2/index.html"><a class="padding" href="../part-2/index.html">Part 2</a></li>
+            <li class="" data-nav-id="/openid-azuread/index.html"><a class="padding" href="../openid-azuread/index.html">Use and configure OpenID connect with Azure AD</a></li>
+            <li class="" data-nav-id="/virtualbox/index.html"><a class="padding" href="../virtualbox/index.html">Virtual Box</a></li>
+            <li class="" data-nav-id="/openshift-installation/index.html"><a class="padding" href="../openshift-installation/index.html">OpenShift Deployment</a><ul id="R-subsections-86151a1b1b80d7ce22aedfc8e10d1ebc" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../ocp/js/clipboard/clipboard.min.js?1757132647" defer></script>
+    <script src="../ocp/js/perfect-scrollbar/perfect-scrollbar.min.js?1757132647" defer></script>
+    <script src="../ocp/js/theme.js?1757132647" defer></script>
+  </body>
+</html>

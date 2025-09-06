@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
-  <head>
+  <head><script src="/ocp/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=ocp/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.139.3">
@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="OpenShift Single Node Cluster :: Openshift Documentation">
     <meta name="twitter:description" content="Step-by-step guide for deploying and integrating OpenShift Single Node clusters.">
-    <meta property="og:url" content="https://khushiramsingh680.github.io/ocp/ocp/ocp-sno/index.html">
+    <meta property="og:url" content="http://localhost:1313/ocp/ocp/ocp-sno/index.html">
     <meta property="og:site_name" content="Openshift Documentation">
     <meta property="og:title" content="OpenShift Single Node Cluster :: Openshift Documentation">
     <meta property="og:description" content="Step-by-step guide for deploying and integrating OpenShift Single Node clusters.">
@@ -21,34 +21,34 @@
     <meta itemprop="description" content="Step-by-step guide for deploying and integrating OpenShift Single Node clusters.">
     <meta itemprop="wordCount" content="310">
     <title>OpenShift Single Node Cluster :: Openshift Documentation</title>
-    <link href="../../ocp/css/auto-complete/auto-complete.min.css?1756040388" rel="stylesheet">
-    <script src="../../ocp/js/auto-complete/auto-complete.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/search-lunr.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/search.min.js?1756040388" defer></script>
+    <link href="../../ocp/css/auto-complete/auto-complete.min.css?1757132647" rel="stylesheet">
+    <script src="../../ocp/js/auto-complete/auto-complete.min.js?1757132647" defer></script>
+    <script src="../../ocp/js/search-lunr.js?1757132647" defer></script>
+    <script src="../../ocp/js/search.js?1757132647" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="../../searchindex.en.js?1756040388";
+      window.relearn.index_js_url="../../searchindex.en.js?1757132647";
     </script>
-    <script src="../../ocp/js/lunr/lunr.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/lunr/lunr.stemmer.support.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/lunr/lunr.multi.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/lunr/lunr.en.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/lunr/lunr.min.js?1757132647" defer></script>
+    <script src="../../ocp/js/lunr/lunr.stemmer.support.min.js?1757132647" defer></script>
+    <script src="../../ocp/js/lunr/lunr.multi.min.js?1757132647" defer></script>
+    <script src="../../ocp/js/lunr/lunr.en.min.js?1757132647" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="../../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1756040388" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1756040388" rel="stylesheet"></noscript>
-    <link href="../../ocp/css/perfect-scrollbar/perfect-scrollbar.min.css?1756040388" rel="stylesheet">
-    <link href="../../css/theme.min.css?1756040388" rel="stylesheet">
-    <link href="../../css/format-html.min.css?1756040388" rel="stylesheet" id="R-format-style">
+    <link href="../../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet"></noscript>
+    <link href="../../ocp/css/perfect-scrollbar/perfect-scrollbar.min.css?1757132647" rel="stylesheet">
+    <link href="../../css/theme.css?1757132647" rel="stylesheet">
+    <link href="../../css/format-html.css?1757132647" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
-      window.relearn.min = `.min`;
+      window.relearn.min = ``;
       window.relearn.path='\/ocp\/ocp-sno\/index.html';
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
-      window.relearn.absBaseUri='https:\/\/khushiramsingh680.github.io\/ocp';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/ocp';
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -174,27 +174,27 @@
 <ol>
 <li>
 <p>Log in to <strong><a href="https://cloud.redhat.com" rel="external" target="_blank">cloud.redhat.com</a></strong> and navigate to <strong>Services</strong>.<br>
-<a href="#R-image-f221eef393e05aab013217799ffec3a3" class="lightbox-link"><img alt="ocp100" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp100.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f221eef393e05aab013217799ffec3a3"><img alt="ocp100" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp100.png"></a></p>
+<a href="#R-image-7a0d379dc1b7c7ee5cfc58c03f7e8400" class="lightbox-link"><img alt="ocp100" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp100.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7a0d379dc1b7c7ee5cfc58c03f7e8400"><img alt="ocp100" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp100.png"></a></p>
 </li>
 <li>
 <p>Select <strong>OpenShift</strong> and click <strong>Create Cluster</strong>.<br>
-<a href="#R-image-1cdab3a8f885d961d149f34ccc11a999" class="lightbox-link"><img alt="ocp101" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp101.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1cdab3a8f885d961d149f34ccc11a999"><img alt="ocp101" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp101.png"></a><br>
-<a href="#R-image-80bf61906f6f3a95c58a232a48766347" class="lightbox-link"><img alt="ocp102" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp102.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-80bf61906f6f3a95c58a232a48766347"><img alt="ocp102" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp102.png"></a><br>
-<a href="#R-image-19e1b7cd9ae075ec6cfcd2f7458d5363" class="lightbox-link"><img alt="ocp104" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp104.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-19e1b7cd9ae075ec6cfcd2f7458d5363"><img alt="ocp104" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp104.png"></a></p>
+<a href="#R-image-8ffe72fb8eef6672bebd059ef68c89ae" class="lightbox-link"><img alt="ocp101" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp101.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ffe72fb8eef6672bebd059ef68c89ae"><img alt="ocp101" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp101.png"></a><br>
+<a href="#R-image-8b21b41e135ba71248445c12a6d690e7" class="lightbox-link"><img alt="ocp102" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp102.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8b21b41e135ba71248445c12a6d690e7"><img alt="ocp102" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp102.png"></a><br>
+<a href="#R-image-037f8db6723a97506500741497eb781e" class="lightbox-link"><img alt="ocp104" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp104.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-037f8db6723a97506500741497eb781e"><img alt="ocp104" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp104.png"></a></p>
 </li>
 <li>
 <p>Fill in the required details.<br>
-<a href="#R-image-c41cb1674b1f2336e8bc7670b5650d56" class="lightbox-link"><img alt="ocp105" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp105.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c41cb1674b1f2336e8bc7670b5650d56"><img alt="ocp105" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp105.png"></a></p>
+<a href="#R-image-f4033795a4cab46e1252ead4a80cbbf4" class="lightbox-link"><img alt="ocp105" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp105.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f4033795a4cab46e1252ead4a80cbbf4"><img alt="ocp105" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp105.png"></a></p>
 </li>
 <li>
 <p>Provide your <strong>SSH public key</strong> and download the generated <strong>ISO image</strong>.<br>
-<a href="#R-image-e3cd9cfa5afbceacb5fbc90e60eb65c3" class="lightbox-link"><img alt="ocp106" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp106.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e3cd9cfa5afbceacb5fbc90e60eb65c3"><img alt="ocp106" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp106.png"></a></p>
+<a href="#R-image-c3852af7008a6e5db21f013446e99ea4" class="lightbox-link"><img alt="ocp106" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp106.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c3852af7008a6e5db21f013446e99ea4"><img alt="ocp106" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp106.png"></a></p>
 </li>
 <li>
 <p>Create a new VM using the downloaded ISO image.</p>
@@ -204,13 +204,13 @@
 </li>
 <li>
 <p>Once the cluster is deployed, the details will be visible in the <strong>Red Hat Console</strong>.<br>
-<a href="#R-image-4a3b243b2a31161e3444c24e8630fd74" class="lightbox-link"><img alt="ocp107" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp107.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4a3b243b2a31161e3444c24e8630fd74"><img alt="ocp107" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp107.png"></a></p>
+<a href="#R-image-87a4f681a77c71f8361df43e230a4733" class="lightbox-link"><img alt="ocp107" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp107.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-87a4f681a77c71f8361df43e230a4733"><img alt="ocp107" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp107.png"></a></p>
 </li>
 <li>
 <p>Download the <strong>kubeconfig file</strong> and <strong>kubeadmin credentials</strong>.<br>
-<a href="#R-image-4f196d7a61043af30030ddc8109778e8" class="lightbox-link"><img alt="ocp108" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp108.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4f196d7a61043af30030ddc8109778e8"><img alt="ocp108" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp108.png"></a></p>
+<a href="#R-image-c1fa5f3fa1fd0951736f545e56378220" class="lightbox-link"><img alt="ocp108" class="lazy lightbox figure-image" loading="lazy" src="../../images/ocp108.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1fa5f3fa1fd0951736f545e56378220"><img alt="ocp108" class="lazy lightbox lightbox-image" loading="lazy" src="../../images/ocp108.png"></a></p>
 </li>
 </ol>
 <hr>
@@ -334,6 +334,21 @@
             <li class="" data-nav-id="/ocp/part-2/index.html"><a class="padding" href="../../ocp/part-2/index.html">Part 2</a></li>
             <li class="" data-nav-id="/ocp/virtualbox/index.html"><a class="padding" href="../../ocp/virtualbox/index.html">Virtual Box</a></li>
             <li class="" data-nav-id="/ocp/ocp-tasks/index.html"><a class="padding" href="../../ocp/ocp-tasks/index.html">Openshift 4 Tasks</a></li></ul></li>
+            <li class="" data-nav-id="/ocp-pre/index.html"><a class="padding" href="../../ocp-pre/index.html">OCP: Day 01</a></li>
+            <li class="" data-nav-id="/openshift-overview/index.html"><a class="padding" href="../../openshift-overview/index.html">OpenShift Overview</a></li>
+            <li class="" data-nav-id="/openshift-alternatives/index.html"><a class="padding" href="../../openshift-alternatives/index.html">Openshift Alternatives</a></li>
+            <li class="" data-nav-id="/openshift-baremetal.md/index.html"><a class="padding" href="../../openshift-baremetal.md/index.html">Openshift Baremetal</a></li>
+            <li class="" data-nav-id="/openshift-developer/index.html"><a class="padding" href="../../openshift-developer/index.html">OpenShift for Developers</a></li>
+            <li class="" data-nav-id="/ocpsetup/index.html"><a class="padding" href="../../ocpsetup/index.html">Openshift Installation and Upgradation</a></li>
+            <li class="" data-nav-id="/openshift-on-single-node/index.html"><a class="padding" href="../../openshift-on-single-node/index.html">OpenShift on VMware Workstation</a></li>
+            <li class="" data-nav-id="/prerequisites./index.html"><a class="padding" href="../../prerequisites./index.html">OpenShift Prerequisites</a></li>
+            <li class="" data-nav-id="/openshifttasks/index.html"><a class="padding" href="../../openshifttasks/index.html">OpenShift Tasks</a></li>
+            <li class="" data-nav-id="/toc/index.html"><a class="padding" href="../../toc/index.html">Openshift TOC</a></li>
+            <li class="" data-nav-id="/part-1/index.html"><a class="padding" href="../../part-1/index.html">Part 1</a></li>
+            <li class="" data-nav-id="/part-2/index.html"><a class="padding" href="../../part-2/index.html">Part 2</a></li>
+            <li class="" data-nav-id="/openid-azuread/index.html"><a class="padding" href="../../openid-azuread/index.html">Use and configure OpenID connect with Azure AD</a></li>
+            <li class="" data-nav-id="/virtualbox/index.html"><a class="padding" href="../../virtualbox/index.html">Virtual Box</a></li>
+            <li class="" data-nav-id="/openshift-installation/index.html"><a class="padding" href="../../openshift-installation/index.html">OpenShift Deployment</a><ul id="R-subsections-86151a1b1b80d7ce22aedfc8e10d1ebc" class="collapsible-menu"></ul></li>
           </ul>
         </div>
         <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
@@ -351,8 +366,8 @@
 <div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="../../ocp/js/clipboard/clipboard.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/perfect-scrollbar/perfect-scrollbar.min.js?1756040388" defer></script>
-    <script src="../../ocp/js/theme.min.js?1756040388" defer></script>
+    <script src="../../ocp/js/clipboard/clipboard.min.js?1757132647" defer></script>
+    <script src="../../ocp/js/perfect-scrollbar/perfect-scrollbar.min.js?1757132647" defer></script>
+    <script src="../../ocp/js/theme.js?1757132647" defer></script>
   </body>
 </html>

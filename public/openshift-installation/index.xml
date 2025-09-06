@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenShift Deployment :: Openshift Documentation</title>
+    <link>http://localhost:1313/ocp/openshift-installation/index.html</link>
+    <description>OpenShift Deployment Scenarios OpenShift on AWS Cloud&#xA;Deploying Red Hat OpenShift on Amazon Web Services (AWS) to leverage scalability and cloud-native integrations.&#xA;OpenShift on Azure Cloud&#xA;Running OpenShift on Microsoft Azure for seamless integration with Azure services and enterprise-grade security.&#xA;OpenShift with CodeReady Containers (CRC)&#xA;A lightweight, local development environment using CRC, suitable for testing and learning OpenShift features on a single machine.&#xA;OpenShift Single Node (SNO) Deployment&#xA;Installing OpenShift in a single-node configuration, ideal for edge and resource-constrained environments.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/ocp/openshift-installation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenShift with CodeReady Containers (CRC)</title>
+      <link>http://localhost:1313/ocp/openshift-installation/crc/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ocp/openshift-installation/crc/index.html</guid>
+      <description>Introduction CodeReady Containers (CRC) provides a minimal OpenShift 4 cluster for development and testing purposes on a local machine. It is ideal for learning, experimenting with OpenShift features, and developing operators or containerized applications.&#xA;Key Features Single-node OpenShift 4 cluster Suitable for laptops and desktops Includes OpenShift CLI (oc) and Kubernetes CLI (kubectl) Easy setup with pre-built VM images System Requirements Component Requirement OS Linux, macOS, or Windows 10/11 RAM 9 GB minimum (12+ GB recommended) CPU 4 cores minimum Disk Space 35 GB free disk space Virtualization KVM (Linux), Hyper-V (Windows), HyperKit (macOS) Installation Steps 1. Download CRC Go to the official Red Hat CRC page:&#xA;👉 https://developers.redhat.com/products/codeready-containers</description>
+    </item>
+    <item>
+      <title>OpenShift on Baremetal</title>
+      <link>http://localhost:1313/ocp/openshift-installation/bm/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/ocp/openshift-installation/bm/index.html</guid>
+      <description>Prerequisites Follow the GitHub Repository&#xA;ocp4-metal-install Create a RHEL 8 or 9 Virtual Machine on VMware Workstation&#xA;Ensure the VM has two network interfaces (NICs) configured as Bridge: NIC 1: Connected to the public network (Internet access) NIC 2: Used for internal network communication Assign a static IP (e.g., 192.168.22.1/24) Learn how to generate and manage MAC addresses Understand Firewalld Configuration&#xA;Learn about: public and private zones How to open ports and allow services Install and Configure a DHCP Server</description>
+    </item>
+  </channel>
+</rss>

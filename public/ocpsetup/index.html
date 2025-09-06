@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/ocp/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=ocp/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Openshift Cluster Installation ,Upgradation and Management. Prequisites: Login to AWS Cloud Create a Virtual Machine
+Create a admin role and assign to the ec2 instance.
+Create your account on Cloud.redhat.com Download Installer and Pull secret Follow the Redhat document for Installation
+Configure AWS Account using link
+Get Domain from Freenom.com
+Know AWS account Limit Create one Ec2 instance
+Configure AWS Cli with Admin access on newly created ec2 instance.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Openshift Installation and Upgradation :: Openshift Documentation">
+    <meta name="twitter:description" content="Openshift Cluster Installation ,Upgradation and Management. Prequisites: Login to AWS Cloud Create a Virtual Machine
+Create a admin role and assign to the ec2 instance.
+Create your account on Cloud.redhat.com Download Installer and Pull secret Follow the Redhat document for Installation
+Configure AWS Account using link
+Get Domain from Freenom.com
+Know AWS account Limit Create one Ec2 instance
+Configure AWS Cli with Admin access on newly created ec2 instance.">
+    <meta property="og:url" content="http://localhost:1313/ocp/ocpsetup/index.html">
+    <meta property="og:site_name" content="Openshift Documentation">
+    <meta property="og:title" content="Openshift Installation and Upgradation :: Openshift Documentation">
+    <meta property="og:description" content="Openshift Cluster Installation ,Upgradation and Management. Prequisites: Login to AWS Cloud Create a Virtual Machine
+Create a admin role and assign to the ec2 instance.
+Create your account on Cloud.redhat.com Download Installer and Pull secret Follow the Redhat document for Installation
+Configure AWS Account using link
+Get Domain from Freenom.com
+Know AWS account Limit Create one Ec2 instance
+Configure AWS Cli with Admin access on newly created ec2 instance.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Openshift Documentation">
+    <meta property="article:published_time" content="2017-01-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2017-01-05T00:00:00+00:00">
+    <meta itemprop="name" content="Openshift Installation and Upgradation :: Openshift Documentation">
+    <meta itemprop="description" content="Openshift Cluster Installation ,Upgradation and Management. Prequisites: Login to AWS Cloud Create a Virtual Machine
+Create a admin role and assign to the ec2 instance.
+Create your account on Cloud.redhat.com Download Installer and Pull secret Follow the Redhat document for Installation
+Configure AWS Account using link
+Get Domain from Freenom.com
+Know AWS account Limit Create one Ec2 instance
+Configure AWS Cli with Admin access on newly created ec2 instance.">
+    <meta itemprop="datePublished" content="2017-01-05T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2017-01-05T00:00:00+00:00">
+    <meta itemprop="wordCount" content="1153">
+    <title>Openshift Installation and Upgradation :: Openshift Documentation</title>
+    <link href="../ocp/css/auto-complete/auto-complete.min.css?1757132647" rel="stylesheet">
+    <script src="../ocp/js/auto-complete/auto-complete.min.js?1757132647" defer></script>
+    <script src="../ocp/js/search-lunr.js?1757132647" defer></script>
+    <script src="../ocp/js/search.js?1757132647" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../searchindex.en.js?1757132647";
+    </script>
+    <script src="../ocp/js/lunr/lunr.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.stemmer.support.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.multi.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.en.min.js?1757132647" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet"></noscript>
+    <link href="../ocp/css/perfect-scrollbar/perfect-scrollbar.min.css?1757132647" rel="stylesheet">
+    <link href="../css/theme.css?1757132647" rel="stylesheet">
+    <link href="../css/format-html.css?1757132647" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/ocpsetup\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/ocp';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../ocpsetup/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#openshift-cluster-installation-upgradation-and-management">Openshift Cluster Installation ,Upgradation and Management.</a></li>
+        <li><a href="#prequisites">Prequisites:</a></li>
+        <li><a href="#debugging-openshift--nodes-with-crictl">Debugging Openshift  nodes with crictl</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#rbac-required-to-manage-the-installation">RBAC required to manage the installation</a></li>
+    <li><a href="#informations-about-dns">Informations about DNS</a></li>
+    <li><a href="#steps-to-be-performed-prior-to-installation">Steps To be Performed Prior to Installation</a></li>
+    <li><a href="#steps-to-generate-ssh-key">Steps to Generate SSH Key</a></li>
+    <li><a href="#example-of-install-configyaml">Example of install-config.yaml</a></li>
+    <li><a href="#obtaining-the-installation-program">Obtaining the installation program</a></li>
+    <li><a href="#deploying-the-cluster">Deploying the cluster</a></li>
+    <li><a href="#important-links">Important Links</a></li>
+    <li><a href="#crictl-command-line-tool-for-managing-cri-o-based-containers-and-images">Crictl (Command line tool for managing cri-o based containers and images)</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../index.html"><span itemprop="name">Openshift Documentation</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Openshift Installation and Upgradation</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../openshift-developer/index.html" title="OpenShift for Developers (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../openshift-on-single-node/index.html" title="OpenShift on VMware Workstation (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable page" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="openshift-installation-and-upgradation">Openshift Installation and Upgradation</h1>
+
+<h3 id="openshift-cluster-installation-upgradation-and-management">Openshift Cluster Installation ,Upgradation and Management.</h3>
+<h3 id="prequisites">Prequisites:</h3>
+<ul>
+<li>
+<p>Login to <a href="https://aws.amazon.com/console/" rel="external" target="_blank">AWS Cloud </a></p>
+</li>
+<li>
+<p>Create a Virtual Machine</p>
+</li>
+<li>
+<p>Create a admin role and assign to the ec2 instance.</p>
+</li>
+<li>
+<p>Create your account on <a href="https://console.redhat.com/" rel="external" target="_blank">Cloud.redhat.com</a>
+<a href="#R-image-74a58592059b51e38603f2b067632613" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="../ocp01.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-74a58592059b51e38603f2b067632613"><img class="lazy lightbox lightbox-image" loading="lazy" src="../ocp01.png"></a></p>
+</li>
+<li>
+<p>Download Installer and Pull secret
+<a href="#R-image-eeaf4e1f964f619c03c3d2652c76fdff" class="lightbox-link"><img class="lazy lightbox figure-image" loading="lazy" src="../ocp02.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eeaf4e1f964f619c03c3d2652c76fdff"><img class="lazy lightbox lightbox-image" loading="lazy" src="../ocp02.png"></a></p>
+</li>
+<li>
+<p>Follow the <a href="https://docs.openshift.com/container-platform/4.10/installing/installing_aws/installing-aws-default.html" rel="external" target="_blank">Redhat document</a> for Installation</p>
+</li>
+<li>
+<p>Configure AWS Account using <a href="https://docs.openshift.com/container-platform/4.8/installing/installing_aws/installing-aws-account.html#installing-aws-account" rel="external" target="_blank">link</a></p>
+</li>
+<li>
+<p>Get Domain from <a href="https://www.freenom.com/en/index.html?lang=en" rel="external" target="_blank">Freenom.com</a></p>
+</li>
+<li>
+<p>Know AWS account <a href="https://docs.openshift.com/container-platform/4.8/installing/installing_aws/installing-aws-account.html#installing-aws-account" rel="external" target="_blank">Limit </a></p>
+</li>
+<li>
+<p>Create one Ec2 instance</p>
+</li>
+<li>
+<p>Configure <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" rel="external" target="_blank">AWS Cli</a> with Admin access on newly created ec2 instance.</p>
+</li>
+<li>
+<p>Make a test using below command</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>aws s3 ls</span></span></code></pre></div>
+</li>
+<li>
+<p>List the OpenShift Container Platform web console route:</p>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc get routes <span style="color:#f92672">-</span>n openshift<span style="color:#f92672">-</span>console <span style="color:#f92672">|</span> grep <span style="color:#e6db74">&#39;console-openshift&#39;</span></span></span></code></pre></div>
+<ul>
+<li>Login to Opeshift Cluster.</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc login <span style="color:#f92672">-</span>u <span style="color:#e6db74">&lt;username&gt;</span> <span style="color:#f92672">-</span>p <span style="color:#e6db74">&lt;Password&gt;</span></span></span></code></pre></div>
+<ul>
+<li>Login to Openshift using kubeconfig</li>
+<li>Login to OpenShift using Token</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc login <span style="color:#f92672">--</span>token<span style="color:#f92672">=</span><span style="color:#e6db74">&lt;token&gt;</span> <span style="color:#f92672">--</span>server<span style="color:#f92672">=&lt;</span>CLuster URL<span style="color:#f92672">&gt;</span></span></span></code></pre></div>
+<ul>
+<li>Verifying the Health of OpenShift Nodes</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc get nodes</span></span></code></pre></div>
+<ul>
+<li>Check the cpu and memory usage of each node</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc adm top nodes</span></span></code></pre></div>
+<ul>
+<li>Check more information about a node</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc describe node <span style="color:#66d9ef">my</span><span style="color:#f92672">-</span>node<span style="color:#f92672">-</span>name</span></span></code></pre></div>
+<ul>
+<li>Check Openshift cluster Version</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc get clusterversion
+</span></span><span style="display:flex;"><span>oc describe clusterversion</span></span></code></pre></div>
+<ul>
+<li>Check Cluster Operator</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc get co</span></span></code></pre></div>
+<ul>
+<li>Displaying the Logs of OpenShift Nodes</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc adm node<span style="color:#f92672">-</span>logs <span style="color:#f92672">-</span>u crio <span style="color:#66d9ef">my</span><span style="color:#f92672">-</span>node<span style="color:#f92672">-</span>name</span></span></code></pre></div>
+<ul>
+<li>Check the logs for kubelet Service</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc adm node<span style="color:#f92672">-</span>logs <span style="color:#f92672">-</span>u kubelet <span style="color:#66d9ef">my</span><span style="color:#f92672">-</span>node<span style="color:#f92672">-</span>name</span></span></code></pre></div>
+<ul>
+<li>check all type of logs for a node</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc adm node<span style="color:#f92672">-</span>logs <span style="color:#66d9ef">my</span><span style="color:#f92672">-</span>node<span style="color:#f92672">-</span>name</span></span></code></pre></div>
+<ul>
+<li>Login to Cluster node using below command and check kubelet service</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc debug node<span style="color:#f92672">/</span><span style="color:#66d9ef">my</span><span style="color:#f92672">-</span>node<span style="color:#f92672">-</span>name
+</span></span><span style="display:flex;"><span>systemctl is<span style="color:#f92672">-</span>active kubelet</span></span></code></pre></div>
+<ul>
+<li>Display the currently authenticated user</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc whoami</span></span></code></pre></div>
+<ul>
+<li>Check the openshift URL</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc whoami  <span style="color:#f92672">--</span>show<span style="color:#f92672">-</span>console</span></span></code></pre></div>
+<ul>
+<li>Check openshift Api using below command</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc whoami  <span style="color:#f92672">--</span>show<span style="color:#f92672">-</span>server </span></span></code></pre></div>
+<ul>
+<li>Check the token used by user</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc whoami  <span style="color:#f92672">--</span>show<span style="color:#f92672">-</span>token</span></span></code></pre></div>
+<h3 id="debugging-openshift--nodes-with-crictl">Debugging Openshift  nodes with crictl</h3>
+<p><a href="https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/" rel="external" target="_blank">https://kubernetes.io/docs/tasks/debug/debug-cluster/crictl/</a></p>
+<h1 id="openshift-4-installation-on-aws">Openshift 4 installation on AWS</h1>
+<h2 id="description">Description</h2>
+<p>This document describes the installation of OCP4 on the AWS</p>
+<h2 id="rbac-required-to-manage-the-installation">RBAC required to manage the installation</h2>
+<p>Be sure to be able to access to :</p>
+<ul>
+<li>the dedicated AWS environment as Admin for that cluster.</li>
+<li>the Redhat Account.</li>
+<li>to Azure account as Admin to create service Principles.</li>
+<li>Bastion environment.</li>
+</ul>
+<h2 id="informations-about-dns">Informations about DNS</h2>
+<p>There should be existing Public Hosted Zone in Route53. In case of stratus, we were having &ldquo;stratus.soprasteria.com&rdquo; as Hosted Zone.</p>
+<h2 id="steps-to-be-performed-prior-to-installation">Steps To be Performed Prior to Installation</h2>
+<p><strong>Create a SSH key</strong></p>
+<p>For production OpenShift Container Platform clusters on which you want to perform installation debugging or disaster recovery, you must provide an SSH key that your ssh-agent process uses to the installer. You can use this key to access the bootstrap machine in a public cluster to troubleshoot installation issues.</p>
+<h2 id="steps-to-generate-ssh-key">Steps to Generate SSH Key</h2>
+<ul>
+<li>Generate the ssh-key through below command.
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>ssh-keygen</code></pre></div>
+</li>
+<li>Start the ssh-agent process as a background task</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>eval &#34;$(ssh-agent -s)&#34;</code></pre></div>
+<ul>
+<li>Add SSH private key to the ssh-agent</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>ssh-add /root/.ssh/id_rsa</code></pre></div>
+<h2 id="example-of-install-configyaml">Example of install-config.yaml</h2>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>[root@ip-172-31-32-217 ec2-user]# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:vr+aWqjvwNJCkqS7ZSdZWzJjt0N1uSAqukjilRd4I/I root@ip-172-31-32-217.eu-west-3.compute.internal
+The key&#39;s randomart image is:
++---[RSA 3072]----+
+|                 |
+|           .     |
+| .    . o o      |
+|o.  .. o o .     |
+|+.ooB++ S .      |
+| =oB+Oo+         |
+|+.BE*.+ o        |
+|==.=.o o o       |
+|+.  .o+.+oo.     |
++----[SHA256]-----+
+[root@ip-172-31-32-217 ec2-user]# eval &#34;$(ssh-agent -s)&#34;
+Agent pid 13802
+[root@ip-172-31-32-217 ec2-user]# ssh-add /root/.ssh/id_rsa
+Identity added: /root/.ssh/id_rsa (root@ip-172-31-32-217.eu-west-3.compute.internal)</code></pre></div>
+<h2 id="obtaining-the-installation-program">Obtaining the installation program</h2>
+<ul>
+<li>Access the Infrastructure Provider page on the OpenShift Cluster Manager site and Login to the Redhat Account.</li>
+<li>Select your infrastructure provider.</li>
+<li>Navigate to the page for your installation type, download the installation program for your operating system, and place the    file in the directory where you will store the installation configuration files.</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>wget https:<span style="color:#e6db74">//mi</span>rror<span style="color:#f92672">.</span>openshift<span style="color:#f92672">.</span>com<span style="color:#e6db74">/pub/o</span>penshift<span style="color:#f92672">-</span>v4<span style="color:#e6db74">/x86_64/c</span>lients<span style="color:#e6db74">/ocp/s</span>table<span style="color:#f92672">/</span>openshift<span style="color:#f92672">-</span>install<span style="color:#f92672">-</span>linux<span style="color:#f92672">.</span>tar<span style="color:#f92672">.</span>gz</span></span></code></pre></div>
+<ul>
+<li>Extract the installation program</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>tar xvf openshift<span style="color:#f92672">-</span>install<span style="color:#f92672">-</span>linux<span style="color:#f92672">.</span>tar<span style="color:#f92672">.</span>gz</span></span></code></pre></div>
+<ul>
+<li>Also download the pull secret from the Red Hat OpenShift Cluster Manager.</li>
+</ul>
+<h2 id="deploying-the-cluster">Deploying the cluster</h2>
+<ul>
+<li>
+<p>Login to the Bastion server.</p>
+</li>
+<li>
+<p>Run the below command to generate the Installation Config file.</p>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span><span style="color:#f92672">./</span>openshift<span style="color:#f92672">-</span>install create install<span style="color:#f92672">-</span>config <span style="color:#f92672">--</span>dir install<span style="color:#f92672">-</span><span style="color:#66d9ef">new</span> <span style="color:#f92672">--</span>log<span style="color:#f92672">-</span>level<span style="color:#f92672">=</span>debug</span></span></code></pre></div>
+<p><strong>NOTE :- As soon as you run the above command, it will ask for basic information like you need to select the Hosted zone, name of the cluster, Zone where you want your VM&rsquo;s to run, ssh key and Pull secret.</strong></p>
+<p>This will create the Install config file. Example for the Installation Config file shown below.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">data</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">install-config</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    apiVersion: v1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    baseDomain: &lt;domian&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    compute:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    - architecture: amd64
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      hyperthreading: Enabled
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      name: worker
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      platform: {}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      replicas: 3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    controlPlane:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      architecture: amd64
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      hyperthreading: Enabled
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      name: master
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      platform: {}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      replicas: 3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    metadata:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      creationTimestamp: null
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      name: newname
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    networking:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      clusterNetwork:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - cidr: 10.128.0.0/14
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        hostPrefix: 23
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      machineNetwork:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - cidr: 10.0.0.0/16
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      networkType: OpenShiftSDN
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      serviceNetwork:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - 172.30.0.0/16
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    platform:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      aws:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        region: eu-west-3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    publish: External
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    pullSecret: &#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    sshKey: |
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeRsMvsXUxzVsnn70zziGkmoCMGwS7A7gswhlvcCoswq1/q3j9yrh91Q8gF0aiKFJmsm45uD1r1DrXc10v+61fmdWcf862YldDBEKF34VN+SJT0wYEy8y3zso8hJ0csi2IB49ywXdw9OZaNk3UrCPbgVhhVZgP4g/thPGNjpJsI10ksuMIE+0Z4cQUbNPR8D1UbOrzPe45ziE1eKYsrRLj0tnQ2Zf8dBRF1NbnmpsfThoQhsQ8e/MGPIaD61BgRr6a/iFHDLYtn1TqyRaUqBrGM1r5hX4Kh6+zI8J1cPmgtNcJhoKvY38npkuKoJYqfhcuvxgKC7k3F43haTwR+5Sz ec2-user@ip-172-31-45-81.eu-west-3.compute.internal</span>    </span></span></code></pre></div>
+<p><strong>NOTE :- Verify the Install config file to check if you have the desired cluster configuration.</strong></p>
+<ul>
+<li>Now run the below command to start the Cluster creation Process</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span><span style="color:#f92672">./</span>openshift<span style="color:#f92672">-</span>install create cluster <span style="color:#f92672">--</span>dir <span style="color:#f92672">&lt;</span>directory where install<span style="color:#f92672">-</span>config is present<span style="color:#f92672">&gt;</span> <span style="color:#f92672">--</span>log<span style="color:#f92672">-</span>level<span style="color:#f92672">=</span>debug</span></span></code></pre></div>
+<p>Now, wait for the around 40-50 mins for the setup of the cluster where you will get the output similar to below one which will have kube-admin details as well as API cluster link.</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>...
+INFO Install complete!
+INFO To access the cluster as the system:admin user when using &#39;oc&#39;, run &#39;export KUBECONFIG=/home/myuser/install_dir/auth/kubeconfig&#39;
+INFO Access the OpenShift web-console here: https://console-openshift-console.apps.mycluster.example.com
+INFO Login to the console with user: &#34;kubeadmin&#34;, and password: &#34;4vYBz-Ee6gm-ymBZj-Wt5AL&#34;
+INFO Time elapsed: 36m22s</code></pre></div>
+<h2 id="important-links">Important Links</h2>
+<ul>
+<li>
+<p>Openshift on AWS Installation Link.
+<a href="https://docs.openshift.com/container-platform/4.7/installing/installing_aws/installing-aws-default.html" rel="external" target="_blank">https://docs.openshift.com/container-platform/4.7/installing/installing_aws/installing-aws-default.html</a></p>
+</li>
+<li>
+<p>Installation Program Link.
+<a href="https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/" rel="external" target="_blank">https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/</a></p>
+</li>
+<li>
+<p>ovnkube resource containers from the nodes (Optional)</p>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in $<span style="color:#960050;background-color:#1e0010">(</span>oc get node <span style="color:#f92672">|</span> grep master <span style="color:#f92672">|</span> awk {<span style="color:#e6db74">&#39;print $1&#39;</span>}); <span style="color:#66d9ef">do</span> echo $i; oc debug node<span style="color:#e6db74">/${i} -- chroot /</span>host sh <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#34;mkdir /tmp/ovnlogs &amp;&amp; cp /var/log/containers/ovnkube*.log /tmp/ovnlogs&#34;</span>; done</span></span></code></pre></div>
+<ul>
+<li>Test Api server if any issue occurs</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc exec <span style="color:#f92672">-</span>it apiserver<span style="color:#f92672">-</span>xxx <span style="color:#f92672">-</span>c openshift<span style="color:#f92672">-</span>apiserver <span style="color:#f92672">-</span>n openshift<span style="color:#f92672">-</span>apiserver sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl <span style="color:#f92672">-</span>v <span style="color:#ae81ff">10.131.34.32</span>:<span style="color:#ae81ff">8443</span></span></span></code></pre></div>
+<ul>
+<li>Simultaneously we collected tcpdump on all master nodes:</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>$ tcpdump -nn -i any -w /tmp/$(hostname)-$(date +&#34;%Y-%m-%d-%H-%M-%S&#34;).pcap</code></pre></div>
+<ul>
+<li>if Api server is not reachanble from outside ,login to one of the master node and try below command</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>curl -k https://{IP}:8443/readyz` to all openshift-apiserver pods</code></pre></div>
+<ul>
+<li>How to collect the inspect information for all co</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>https://access.redhat.com/solutions/6995290
+oc adm inspect co --request-timeout=30m</code></pre></div>
+<ul>
+<li>Collect the inspect report for a single project</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>oc adm ns inspect ns<span style="color:#f92672">/</span>openshift<span style="color:#f92672">-</span>apiserver</span></span></code></pre></div>
+<ul>
+<li>you get the below message once the installation is completed.</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>INFO     export KUBECONFIG<span style="color:#f92672">=</span><span style="color:#e6db74">/home/</span>ec2<span style="color:#f92672">-</span>user<span style="color:#e6db74">/auth/</span>kubeconfig
+</span></span><span style="display:flex;"><span>INFO Access the OpenShift web<span style="color:#f92672">-</span>console here: https:<span style="color:#e6db74">//co</span>nsole<span style="color:#f92672">-</span>openshift<span style="color:#f92672">-</span>console<span style="color:#f92672">.</span>apps<span style="color:#f92672">.</span>myapp<span style="color:#f92672">.</span>openshift<span style="color:#f92672">.</span>gq
+</span></span><span style="display:flex;"><span>INFO Login to the console with user: <span style="color:#e6db74">&#34;kubeadmin&#34;</span>, <span style="color:#f92672">and</span> password: <span style="color:#e6db74">&#34;479aZ-Z2QZy-UdCQy-9d9VN&#34;</span></span></span></code></pre></div>
+<ul>
+<li>If you have lost all the password like kubeadmin password and kubeconfig file as well you can still run the command.</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span> cd <span style="color:#e6db74">/etc/</span>kubernetes<span style="color:#e6db74">/static-pod-resources/</span>kube<span style="color:#f92672">-</span>apiserver<span style="color:#f92672">-</span>certs<span style="color:#e6db74">/secrets/</span>node<span style="color:#f92672">-</span>kubeconfigs<span style="color:#f92672">/</span>
+</span></span><span style="display:flex;"><span> export KUBECONFIG<span style="color:#f92672">=</span>$<span style="color:#960050;background-color:#1e0010">(</span>pwd)<span style="color:#f92672">/</span>localhost<span style="color:#f92672">.</span>kubeconfig
+</span></span><span style="display:flex;"><span> oc whoami</span></span></code></pre></div>
+<h2 id="crictl-command-line-tool-for-managing-cri-o-based-containers-and-images">Crictl (Command line tool for managing cri-o based containers and images)</h2>
+<ul>
+<li>pull ubuntu image</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>sudo crictl pull ubuntu</span></span></code></pre></div>
+<ul>
+<li>List Images</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>sudo crictl images</span></span></code></pre></div>
+<ul>
+<li>Delete an image</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>sudo crictl rmi <span style="color:#ae81ff">08</span>d22c0ceb150</span></span></code></pre></div>
+<ul>
+<li>Print information about specific containers</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span>crictl inspect [container_id1 container_id2 <span style="color:#f92672">...</span>]</span></span></code></pre></div>
+<ul>
+<li>Open a specific shell inside a running container</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span> crictl exec <span style="color:#f92672">-</span>it [container_id] [sh]</span></span></code></pre></div>
+<ul>
+<li>Pull a specific image from a registry</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span> crictl pull [image:tag]</span></span></code></pre></div>
+<ul>
+<li>Print and [f]ollow logs of a specific container</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span> crictl logs <span style="color:#f92672">-</span>f [container_id]</span></span></code></pre></div>
+<ul>
+<li>Remove one or more images</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-t" data-lang="t"><span style="display:flex;"><span> crictl rmi [image_id1 image_id2 <span style="color:#f92672">...</span>]</span></span></code></pre></div>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 5, 2017
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="../index.html">
+            <div class="logo-title">Openshift Documentation</div>
+          </a>
+        </div>
+        <search><form action="../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="../index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/ocp/index.html"><a class="padding" href="../ocp/index.html">Redhat Openshift </a><ul id="R-subsections-deec8eacf990d8f833b93419ccb5dda5" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/ocp-pre/index.html"><a class="padding" href="../ocp-pre/index.html">OCP: Day 01</a></li>
+            <li class="" data-nav-id="/openshift-overview/index.html"><a class="padding" href="../openshift-overview/index.html">OpenShift Overview</a></li>
+            <li class="" data-nav-id="/openshift-alternatives/index.html"><a class="padding" href="../openshift-alternatives/index.html">Openshift Alternatives</a></li>
+            <li class="" data-nav-id="/openshift-baremetal.md/index.html"><a class="padding" href="../openshift-baremetal.md/index.html">Openshift Baremetal</a></li>
+            <li class="" data-nav-id="/openshift-developer/index.html"><a class="padding" href="../openshift-developer/index.html">OpenShift for Developers</a></li>
+            <li class="active " data-nav-id="/ocpsetup/index.html"><a class="padding" href="../ocpsetup/index.html">Openshift Installation and Upgradation</a></li>
+            <li class="" data-nav-id="/openshift-on-single-node/index.html"><a class="padding" href="../openshift-on-single-node/index.html">OpenShift on VMware Workstation</a></li>
+            <li class="" data-nav-id="/prerequisites./index.html"><a class="padding" href="../prerequisites./index.html">OpenShift Prerequisites</a></li>
+            <li class="" data-nav-id="/openshifttasks/index.html"><a class="padding" href="../openshifttasks/index.html">OpenShift Tasks</a></li>
+            <li class="" data-nav-id="/toc/index.html"><a class="padding" href="../toc/index.html">Openshift TOC</a></li>
+            <li class="" data-nav-id="/part-1/index.html"><a class="padding" href="../part-1/index.html">Part 1</a></li>
+            <li class="" data-nav-id="/part-2/index.html"><a class="padding" href="../part-2/index.html">Part 2</a></li>
+            <li class="" data-nav-id="/openid-azuread/index.html"><a class="padding" href="../openid-azuread/index.html">Use and configure OpenID connect with Azure AD</a></li>
+            <li class="" data-nav-id="/virtualbox/index.html"><a class="padding" href="../virtualbox/index.html">Virtual Box</a></li>
+            <li class="" data-nav-id="/openshift-installation/index.html"><a class="padding" href="../openshift-installation/index.html">OpenShift Deployment</a><ul id="R-subsections-86151a1b1b80d7ce22aedfc8e10d1ebc" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../ocp/js/clipboard/clipboard.min.js?1757132647" defer></script>
+    <script src="../ocp/js/perfect-scrollbar/perfect-scrollbar.min.js?1757132647" defer></script>
+    <script src="../ocp/js/theme.js?1757132647" defer></script>
+  </body>
+</html>

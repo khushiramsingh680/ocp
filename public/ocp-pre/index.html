@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/ocp/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=ocp/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Relearn 8.0.0+9803d5122ebb3276acea823f476e9eb44f607862">
+    <meta name="description" content="Prerequisites Follow Github Repo
+Change timezone to UTC
+timedatectl sudo timedatectl set-timezone UTCcheck network device status nmcli device status nmcli connection showActivate nmcli connection up &lt;connection name&gt;Add Network profile if ip address is not taken nmcli con add type ethernet ifname ens160 con-name ens160Bring the connection up nmcli con up ens160Configure Local yum using ISO Mount Iso Image mount /dev/sr0 /mnt/Create the yum repo cat &lt;&lt; EOF &gt; /etc/yum.repos.d/rhel8-local.repo [BaseOS] name=RHEL8 BaseOS baseurl=file:///mnt/BaseOS enabled=1 gpgcheck=0 [AppStream] name=RHEL8 AppStream baseurl=file:///mnt/AppStream enabled=1 gpgcheck=0 EOF">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="OCP: Day 01 :: Openshift Documentation">
+    <meta name="twitter:description" content="Prerequisites Follow Github Repo
+Change timezone to UTC
+timedatectl sudo timedatectl set-timezone UTCcheck network device status nmcli device status nmcli connection showActivate nmcli connection up &lt;connection name&gt;Add Network profile if ip address is not taken nmcli con add type ethernet ifname ens160 con-name ens160Bring the connection up nmcli con up ens160Configure Local yum using ISO Mount Iso Image mount /dev/sr0 /mnt/Create the yum repo cat &lt;&lt; EOF &gt; /etc/yum.repos.d/rhel8-local.repo [BaseOS] name=RHEL8 BaseOS baseurl=file:///mnt/BaseOS enabled=1 gpgcheck=0 [AppStream] name=RHEL8 AppStream baseurl=file:///mnt/AppStream enabled=1 gpgcheck=0 EOF">
+    <meta property="og:url" content="http://localhost:1313/ocp/ocp-pre/index.html">
+    <meta property="og:site_name" content="Openshift Documentation">
+    <meta property="og:title" content="OCP: Day 01 :: Openshift Documentation">
+    <meta property="og:description" content="Prerequisites Follow Github Repo
+Change timezone to UTC
+timedatectl sudo timedatectl set-timezone UTCcheck network device status nmcli device status nmcli connection showActivate nmcli connection up &lt;connection name&gt;Add Network profile if ip address is not taken nmcli con add type ethernet ifname ens160 con-name ens160Bring the connection up nmcli con up ens160Configure Local yum using ISO Mount Iso Image mount /dev/sr0 /mnt/Create the yum repo cat &lt;&lt; EOF &gt; /etc/yum.repos.d/rhel8-local.repo [BaseOS] name=RHEL8 BaseOS baseurl=file:///mnt/BaseOS enabled=1 gpgcheck=0 [AppStream] name=RHEL8 AppStream baseurl=file:///mnt/AppStream enabled=1 gpgcheck=0 EOF">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Openshift Documentation">
+    <meta itemprop="name" content="OCP: Day 01 :: Openshift Documentation">
+    <meta itemprop="description" content="Prerequisites Follow Github Repo
+Change timezone to UTC
+timedatectl sudo timedatectl set-timezone UTCcheck network device status nmcli device status nmcli connection showActivate nmcli connection up &lt;connection name&gt;Add Network profile if ip address is not taken nmcli con add type ethernet ifname ens160 con-name ens160Bring the connection up nmcli con up ens160Configure Local yum using ISO Mount Iso Image mount /dev/sr0 /mnt/Create the yum repo cat &lt;&lt; EOF &gt; /etc/yum.repos.d/rhel8-local.repo [BaseOS] name=RHEL8 BaseOS baseurl=file:///mnt/BaseOS enabled=1 gpgcheck=0 [AppStream] name=RHEL8 AppStream baseurl=file:///mnt/AppStream enabled=1 gpgcheck=0 EOF">
+    <meta itemprop="wordCount" content="88">
+    <title>OCP: Day 01 :: Openshift Documentation</title>
+    <link href="../ocp/css/auto-complete/auto-complete.min.css?1757132647" rel="stylesheet">
+    <script src="../ocp/js/auto-complete/auto-complete.min.js?1757132647" defer></script>
+    <script src="../ocp/js/search-lunr.js?1757132647" defer></script>
+    <script src="../ocp/js/search.js?1757132647" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="../searchindex.en.js?1757132647";
+    </script>
+    <script src="../ocp/js/lunr/lunr.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.stemmer.support.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.multi.min.js?1757132647" defer></script>
+    <script src="../ocp/js/lunr/lunr.en.min.js?1757132647" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../ocp/fonts/fontawesome/css/fontawesome-all.min.css?1757132647" rel="stylesheet"></noscript>
+    <link href="../ocp/css/perfect-scrollbar/perfect-scrollbar.min.css?1757132647" rel="stylesheet">
+    <link href="../css/theme.css?1757132647" rel="stylesheet">
+    <link href="../css/format-html.css?1757132647" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/ocp-pre\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/ocp';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // legal
+      window.relearn.getItem = (s,n) => {return s.getItem(n)};
+      window.relearn.setItem = (s,n,v) => {return s.setItem(n,v)};
+      window.relearn.removeItem = (s,n) => {return s.removeItem(n)};
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.relearn.getItem(window.localStorage, window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.relearn.setItem(window.localStorage, window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="../ocp-pre/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#configure-local-yum-using-iso">Configure Local yum using ISO</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="../index.html"><span itemprop="name">Openshift Documentation</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">OCP: Day 01</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../ocp/ocp-tasks/index.html" title="Openshift 4 Tasks (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../openshift-overview/index.html" title="OpenShift Overview (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable page" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="ocp-day-01">OCP: Day 01</h1>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>
+<p><a href="https://github.com/ryanhay/ocp4-metal-install" rel="external" target="_blank">Follow Github Repo</a></p>
+</li>
+<li>
+<p>Change timezone to UTC</p>
+</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>timedatectl
+</span></span><span style="display:flex;"><span>sudo timedatectl set-timezone UTC</span></span></code></pre></div>
+<ul>
+<li>check network device status</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nmcli device status
+</span></span><span style="display:flex;"><span>nmcli connection show</span></span></code></pre></div>
+<ul>
+<li>Activate</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nmcli connection up &lt;connection name&gt;</span></span></code></pre></div>
+<ul>
+<li>Add Network profile if ip address is not taken</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nmcli con add type ethernet ifname ens160 con-name ens160</span></span></code></pre></div>
+<ul>
+<li>Bring the connection up</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nmcli con up ens160</span></span></code></pre></div>
+<h2 id="configure-local-yum-using-iso">Configure Local yum using ISO</h2>
+<ul>
+<li>Mount Iso Image</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mount /dev/sr0 /mnt/</span></span></code></pre></div>
+<ul>
+<li>Create the yum repo</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt; EOF &gt; /etc/yum.repos.d/rhel8-local.repo
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[BaseOS]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">name=RHEL8 BaseOS
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">baseurl=file:///mnt/BaseOS
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">enabled=1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">gpgcheck=0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[AppStream]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">name=RHEL8 AppStream
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">baseurl=file:///mnt/AppStream
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">enabled=1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">gpgcheck=0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span></span></span></code></pre></div>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="../index.html">
+            <div class="logo-title">Openshift Documentation</div>
+          </a>
+        </div>
+        <search><form action="../search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="../index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/ocp/index.html"><a class="padding" href="../ocp/index.html">Redhat Openshift </a><ul id="R-subsections-deec8eacf990d8f833b93419ccb5dda5" class="collapsible-menu"></ul></li>
+            <li class="active " data-nav-id="/ocp-pre/index.html"><a class="padding" href="../ocp-pre/index.html">OCP: Day 01</a></li>
+            <li class="" data-nav-id="/openshift-overview/index.html"><a class="padding" href="../openshift-overview/index.html">OpenShift Overview</a></li>
+            <li class="" data-nav-id="/openshift-alternatives/index.html"><a class="padding" href="../openshift-alternatives/index.html">Openshift Alternatives</a></li>
+            <li class="" data-nav-id="/openshift-baremetal.md/index.html"><a class="padding" href="../openshift-baremetal.md/index.html">Openshift Baremetal</a></li>
+            <li class="" data-nav-id="/openshift-developer/index.html"><a class="padding" href="../openshift-developer/index.html">OpenShift for Developers</a></li>
+            <li class="" data-nav-id="/ocpsetup/index.html"><a class="padding" href="../ocpsetup/index.html">Openshift Installation and Upgradation</a></li>
+            <li class="" data-nav-id="/openshift-on-single-node/index.html"><a class="padding" href="../openshift-on-single-node/index.html">OpenShift on VMware Workstation</a></li>
+            <li class="" data-nav-id="/prerequisites./index.html"><a class="padding" href="../prerequisites./index.html">OpenShift Prerequisites</a></li>
+            <li class="" data-nav-id="/openshifttasks/index.html"><a class="padding" href="../openshifttasks/index.html">OpenShift Tasks</a></li>
+            <li class="" data-nav-id="/toc/index.html"><a class="padding" href="../toc/index.html">Openshift TOC</a></li>
+            <li class="" data-nav-id="/part-1/index.html"><a class="padding" href="../part-1/index.html">Part 1</a></li>
+            <li class="" data-nav-id="/part-2/index.html"><a class="padding" href="../part-2/index.html">Part 2</a></li>
+            <li class="" data-nav-id="/openid-azuread/index.html"><a class="padding" href="../openid-azuread/index.html">Use and configure OpenID connect with Azure AD</a></li>
+            <li class="" data-nav-id="/virtualbox/index.html"><a class="padding" href="../virtualbox/index.html">Virtual Box</a></li>
+            <li class="" data-nav-id="/openshift-installation/index.html"><a class="padding" href="../openshift-installation/index.html">OpenShift Deployment</a><ul id="R-subsections-86151a1b1b80d7ce22aedfc8e10d1ebc" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols">
+          <ul class="">
+          </ul>
+        </div>
+<div id="R-footer"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="../ocp/js/clipboard/clipboard.min.js?1757132647" defer></script>
+    <script src="../ocp/js/perfect-scrollbar/perfect-scrollbar.min.js?1757132647" defer></script>
+    <script src="../ocp/js/theme.js?1757132647" defer></script>
+  </body>
+</html>
